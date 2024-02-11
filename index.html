@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <title>To Do List</title>
+</head>
+<body class="dark:bg-slate-900 bg-white font-mono">
+
+    <div class="hero m-3 ">
+        
+        <nav class="lg:px-12 lg:py-3 px-4 py-2 dark:bg-slate-800/70 bg-slate-300/30 rounded-lg">
+            <div class="">
+                <h4 class="dark:text-white text-black lg:text-3xl md:text-xl text-lg font-bold italic ">To-Do </h4>
+            </div>
+        </nav>
+
+        <div class=" flex justify-center lg:flex-nowrap flex-wrap-reverse gap-3 w-full">
+
+            <div class="dark:bg-slate-800/70 bg-slate-300/30 lg:p-4 p-3 my-5  rounded-lg space-y-3 lg:w-2/6 md:w-3/6 w-full">
+                <div class="relative ">
+                    <input type="text" id="todoTaskInput" class="w-full dark:bg-slate-700 bg-slate-300 dark:text-white text-black lg:px-5 lg:py-2 px-3 py-1 dark:text-white text-black lg:text-lg text-lg font-bold rounded-lg outline-none" placeholder="Add To-Do's">
+                    <!-- <div class="absolute inset-y-0 right-0 flex pr-3 items-center">
+                        <span class="dark:text-white text-black rounded-full border-2 py-[0.3px] px-2">+</span>
+                    </div> -->
+                </div>
+                <div class="flex justify-between">
+                    <div class="">
+                        <h3 class="dark:text-white text-white">To Do List </h3>
+                    </div>
+                    <div class="dark:text-white flex">
+                        <div>
+                            <svg viewBox="0 0 24 24" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 4V20M9 10H15C15.5523 10 16 9.55228 16 9V5C16 4.44772 15.5523 4 15 4H9C8.44772 4 8 4.44772 8 5V9C8 9.55228 8.44772 10 9 10ZM9 20H19C19.5523 20 20 19.5523 20 19V15C20 14.4477 19.5523 14 19 14H9C8.44772 14 8 14.4477 8 15V19C8 19.5523 8.44772 20 9 20Z" stroke="#00ffd5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </div>
+                        <div>
+                            <!-- <svg class="" height="20"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 12V17" stroke="#fe1616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M14 12V17" stroke="#fe1616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M4 7H20" stroke="#fe1616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M6 10V18C6 19.6569 7.34315 21 9 21H15C16.6569 21 18 19.6569 18 18V10" stroke="#fe1616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z" stroke="#fe1616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-3 overflow-y-auto lg:h-[70vh] scrollbar h-full" id="taskListHero">
+                    <div class="relative ">
+                        <input type="text" value="This is task to do list and hae to do it in any way yo can do it " class="truncate w-full dark:bg-slate-700 bg-slate-300 dark:text-white text-black lg:px-5 lg:py-2 px-3 lg:px-8 px-6 py-1 dark:text-white text-black lg:text-base text-sm font-semibold rounded-lg outline-none" disabled >
+                        <input id="" type="checkbox" value="" name="bordered-checkbox" class="absolute inset-y-0 left-0 flex my-auto ml-2 items-center  w-3 h-3 text-blue-600 bg-gray-100 rounded dark:bg-gray-700">
+                        <div class="absolute inset-y-0 right-0 flex my-auto mr-2 items-center">
+                            <svg class="" height="20"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 12V17" stroke="#fe1616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M14 12V17" stroke="#fe1616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M4 7H20" stroke="#fe1616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M6 10V18C6 19.6569 7.34315 21 9 21H15C16.6569 21 18 19.6569 18 18V10" stroke="#fe1616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z" stroke="#fe1616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+
+        </div>
+
+    </div>
+
+
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
