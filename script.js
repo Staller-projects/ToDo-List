@@ -67,7 +67,7 @@ const displayTaskOnScreen = () => {
         taskDisplayHeroDiv.innerHTML = null;
         getDataFromLocalstorage().forEach(task => {
             taskDisplayHeroDiv.innerHTML += `  
-                <div class="relative " >
+                <div class="relative" id="${task.id}">
                     <input type="text" id="_task${task.id}" value="${task.task}"  class="${task.complete ? 'line-through' : ''} truncate w-full dark:bg-slate-700 bg-slate-300 dark:text-white text-black lg:px-5 lg:py-2 px-3 lg:px-8 px-6 py-1 dark:text-white text-black lg:text-base text-sm font-semibold rounded-lg outline-none" disabled >
                     <input id="_check${task.id}" ${task.complete ? 'checked' : ''} onClick="markTaskAsCompleteOrNot('${task.id}')" type="checkbox" class="absolute inset-y-0 left-0 flex my-auto ml-2 items-center  w-3 h-3 text-blue-600 bg-gray-100 rounded dark:bg-gray-700">
                     <div onClick="removeTaskById('${task.id}')" class="absolute inset-y-0 right-0 flex my-auto mr-2 items-center" >
@@ -119,7 +119,7 @@ const markTaskAsCompleteOrNot = (taskId) => {
 
 
 
-todoTaskInputElement.addEventListener('keydown', addtodoTaskToList, true)
+todoTaskInputElement.addEventListener('keydown', addtodoTaskToList)
 displayTaskOnScreen()
 
 
