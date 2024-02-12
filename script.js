@@ -92,18 +92,18 @@ const removeTaskById = (taskId) => {
 
 const markTaskAsCompleteOrNot = (taskId) => {
     let taskCheckbox = document.getElementById(`_check${taskId}`);
-
-    console.log(taskCheckbox.checked);
     
     let tasks = getDataFromLocalstorage();
     let temp = tasks.find(task => task.id === taskId);
 
     if(!taskCheckbox.checked) { 
-        temp.complete, taskCheckbox.checked = false;
+        temp.complete = false; 
+        taskCheckbox.checked = false;
         document.getElementById(`_task${taskId}`).classList.remove("line-through");
         
     } else { 
-        temp.complete, taskCheckbox.checked = true;
+        temp.complete = true; 
+        taskCheckbox.checked = true;
         document.getElementById(`_task${taskId}`).classList.add("line-through");
 
     }
